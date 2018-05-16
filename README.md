@@ -1,3 +1,3 @@
 ﻿### AUTORES
-Eduard Forés
-Denys Sydorenko
+    Eduard Forés
+    Denys Sydorenko
