@@ -34,8 +34,9 @@
 ### OBERVACIONES DEL DISEÑO
 
     Debido a la complicación del particionamiento de ficheros, esta solución esta basada en que cada 
-    Mapper va a leer un fichero entero. Es decir, en la práctica 1 (www.github.com/denyssydorenko/SD_Practica1) 
-    cada mapper leía un trozo del fichero (fichero/núm. mappers), en la práctica cada Mapper lee 1 fichero entero.
+    Mapper va a leer un fichero entero. Es decir, en la práctica 1 
+    (www.github.com/denyssydorenko/SD_Practica1) cada mapper leía un trozo del fichero 
+    (fichero/núm. mappers), en la práctica cada Mapper lee 1 fichero entero.
     Por lo tanto, las pruebas se han realizado con X Mappers entre los cuales han hecho el HashMap y 
     han devuelto el número total de palabras de los X ficheros.
     Por si no ha quedado del todo claro, el programa guarda en el fichero save_final.txt un HashMap final 
