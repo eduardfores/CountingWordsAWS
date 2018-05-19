@@ -1,6 +1,10 @@
 # Eduard Fores Ferrer, Denys Sydorenko
 # 17/05/2018 v1.0
 
+#Comentario.
+#Introducimos el nombre del fichero y seguidamente un numero, el fichero es del cual se hara el algoritmo
+#MapReducer y el numero es el numero de Mappers que vamos a utilizar.
+
 #from concurrent.futures import ThreadPoolExecutor
 
 import boto3
@@ -36,29 +40,7 @@ payload3=dict()
 payload3["key1"]=FILE
 
 ''' Definiciones de ACCESS_KEY y SECRET_KEY para poder acceder desde fuera de Amazon. '''
-''' Diferencia entre resource y client, es que uno es de mas alto nivel que el otro. '''
 s3=boto3.client('s3', aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
-s3_r=boto3.resource('s3', aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
-
-''' Para subir un archivo a nuestro BUCKET de Amazon. '''
-#s3.upload_file(FILE, BUCKET_NAME, FILE)
-
-''' Para descargar un archivo de nuestro BUCKET de Amazon. '''
-'''
-txt=""
-try:
-	s3.download_file(BUCKET_NAME, FILE, PATH+FILE)
-except botocore.exceptions.ClientError as e:
-	if e.response['Error']['Code']=="404":
-		print("The object does not exist.")
-	else:
-		raise
-
-with open(PATH+FILE, 'r') as reader:
-	for line in reader:
-		txt+=line
-payload3["key1"]=txt
-'''
 
 ''' Definiciones de ACCESS_KEY y SECRET_KEY para poder acceder desde fuera de Amazon. '''
 client = boto3.client('lambda', region_name="eu-west-3", aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SECRET_KEY)
@@ -90,5 +72,3 @@ response=client.invoke(
 
 ''' Devuelve por pantalla el map_final y el numero total de palabras. '''
 print response['Payload'].read()
-
-
