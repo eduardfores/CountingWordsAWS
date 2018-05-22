@@ -4,16 +4,18 @@
 
 ### PASOS A SEGUIR PARA EL FUNCIONAMIENTO DEL PROGRAMA 
 
-    - paso 1: Creamos un BUCKET en nuestro servidor de AWS (Amazon Web Service), al cual subimos los 
-    archivos a los cuales vamos a aplicar el algoritmo MapReducer.
-    - paso 2: Configuramos las funciones lambda. En nuestro caso tenemos 2 lambda, una de ellas es el 
+    - paso 1: Activar las claves de Amazon.
+    - paso 2: Coger las claves de Amazon y ponerlas dentro de los archivos: mapper.py, reducer.py, 
+    upload_download.py y SD_Practica2.py.
+    - paso 3: Creamos un BUCKET en nuestro servidor de AWS (Amazon Web Service), al cual subimos los 
+    archivos.
+    - paso 4: Configuramos las funciones lambda. En nuestro caso tenemos 2 lambda, una de ellas es el 
     Mapper que se encarga de hacer el HashMap del fichero y la segunda lambda es el Reducer, que se encarga 
     de hacer un HashMap concatenando los HashMap de los diferentes Mappers.
-    - paso 3: Debemos sustituir las Claves en nuestros ficheros para que la comunicación sea segura.
-    - paso 4: Nos colocamos en el directorio de la práctica y ejecutamos nuestro fichero Python con el 
+    - paso 5: Nos colocamos en el directorio de la práctica y ejecutamos nuestro fichero Python con el 
     número de Mappers que queremos y el nombre del fichero del cual se va a hacer el HashMap. 
     (Comanda: python SD_Practica2.py 5 big.txt)
-    - paso 5: Observamos los resultados obtenidos en el BUCKET de nuestro servidor AWS, ya que generamos 
+    - paso 6: Observamos los resultados obtenidos en el BUCKET de nuestro servidor AWS, ya que generamos 
     un fichero de salida en el cual se guarda el HashMap total y el número total de palabras (save_final.txt).
     
 ### DESCRIPCIÓN DE LA SOLUCIÓN
