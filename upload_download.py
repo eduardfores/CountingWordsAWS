@@ -1,4 +1,4 @@
-# Eduard Fores Ferrer, Denys Sydorenko
+# Eduard Fores Ferrer, Denys Sydorenko Sydorenko
 # 17/05/2018 v1.0
 
 #Comentario

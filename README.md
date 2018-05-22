@@ -1,6 +1,6 @@
 ### AUTORES
-    Eduard Forés
-    Denys Sydorenko
+    Eduard Forés Ferrer
+    Denys Sydorenko Sydorenko
 
 ### PASOS A SEGUIR PARA EL FUNCIONAMIENTO DEL PROGRAMA 
 
