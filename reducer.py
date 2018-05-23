@@ -24,7 +24,7 @@ s3_b =boto3.client('s3', aws_access_key_id=ACCESS_KEY, aws_secret_access_key=SEC
 def lambda_handler(event, context):
     map_final={}
     respuesta=dict()
-    num=event['Key1']
+    num=event['key1']
     count=0
     
     for i in range(0,num):
